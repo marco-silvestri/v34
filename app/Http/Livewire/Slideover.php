@@ -17,7 +17,7 @@ class Slideover extends Component
 
     public function mount(){
         $this->open = false;
-        $this->step = 0;
+        $this->step = 1;
     }
 
 
@@ -25,6 +25,6 @@ class Slideover extends Component
     public function render()
     {
         
-        return view('livewire.slideover', [ 'pippo' => now()]);
+        return view('livewire.slideover');
     }
 }

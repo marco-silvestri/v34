@@ -1,4 +1,4 @@
-<div x-data="{ open: @entangle($attributes->wire('model')).defer, }" @keydown.window.escape="open = false;">
+<div x-cloak x-data="{ open: @entangle($attributes->wire('model')).defer, }" @keydown.window.escape="open = false;">
   <div x-show="open" class="absolute inset-0 overflow-hidden">
     <div x-show="open" x-description="Background overlay, show/hide based on slide-over state." x-transition:enter="ease-in-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in-out duration-500" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
     <section @click.away="open = false;" class="absolute inset-y-0 right-0 pl-10 max-w-full flex" aria-labelledby="slide-over-heading">
